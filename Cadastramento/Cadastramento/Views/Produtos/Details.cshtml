@@ -1,0 +1,30 @@
+﻿@model Cadastramento.Models.Produtos
+
+@{
+    ViewData["Title"] = "Detalhes";
+}
+
+<h3 class="text-center">Detalhes de Produtos</h3>
+
+<div>
+    <h4>Produtos</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nome_Produto)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nome_Produto)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Preco_Produto)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Preco_Produto)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Editar</a> |
+    <a asp-action="Index">Gostaria de Voltar a Página Anterior ?</a>
+</div>

@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Cadastramento.Models.Acessos>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h3 class="text-center">Todos os acessos realizados pelos usuários!</h3>
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Detalhamento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Detalhamento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
